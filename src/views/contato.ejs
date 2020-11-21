@@ -1,0 +1,42 @@
+<%- include('includes/head')  %>
+<%- include('includes/navbar') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+            <h1 class="text-center">Preencha o contato</h1>
+            <p class="text-center lead">Preencha o formulário abaixo com as informações do seu contato:</p>
+
+            <%- include('includes/messages')%>
+
+                    <form action="/contato/register" method="POST">
+                       <div class="form-group">
+                         <label>Nome</label>
+                         <input type="text" class="form-control" name="name">
+                      </div>
+                       <div class="form-group">
+                         <label>Sobrenome</label>
+                         <input type="password" class="form-control" name="password">
+                      </div>
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email">
+                      </div>
+                      <div class="form-group">
+                         <label>Telefone</label>
+                         <input type="tel" class="form-control" name="telefone">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+</div>
+
+<% include('includes/footer') %> 
