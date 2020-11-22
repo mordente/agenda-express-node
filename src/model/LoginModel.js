@@ -22,11 +22,11 @@ class Login {
 
       this.user = await LoginModel.findOne( {email: this.body.email} );
       if(!this.user) {
-        this.errors.push('Esse usuário não existe.');
+        this.errors.push('Email ou senha inválidos.');
         return;
       }
       if(!bcrypt.compareSync(this.body.password, this.user.password)) {
-        this.errors.push("Sua senha está errada.");
+        this.errors.push("Email ou senha inválidos.");
         this.user = null;
         return;
       }
