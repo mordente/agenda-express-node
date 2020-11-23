@@ -22,5 +22,7 @@ route.get('/contato/:id', loginRequired, contatoController.editIndex);
 route.post('/contato/edit/:id', loginRequired, contatoController.edit);
 route.get('/contato/delete/:id', loginRequired, contatoController.delete);
 
+//404 ROTA
+route.get('*', homeController.error404);
 
 module.exports = route;
