@@ -1,0 +1,14 @@
+<%if (contacts) {%>
+<% if(contacts.length > 0) { %>
+    <% contacts.forEach(contato => { %>
+        <tr>
+            <td> <%= contato.name %> </td>
+            <td> <%= contato.sobrenome %> </td>
+            <td> <%= contato.email %> </td>
+            <td> <%= contato.telefone %> </td>
+            <td><a href="/contato/<%= contato._id %>">Editar</a></td>
+            <td><a href="/contato/delete/<%= contato._id %>" class="text-danger">Excluir</a></td>
+        </tr>
+    <% }) %>
+<% } %>
+    <% }%>
